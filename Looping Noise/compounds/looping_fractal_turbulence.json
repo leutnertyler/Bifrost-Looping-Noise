@@ -17,12 +17,12 @@
                 {
                     "metaName": "documentation",
                     "metaType": "string",
-                    "metaValue": "../Looping Noise/docs/looping_fractal_turbulence.md"
+                    "metaValue": "../docs/looping_fractal_turbulence.md"
                 },
                 {
                     "metaName": "icon",
                     "metaType": "string",
-                    "metaValue": "../Looping Noise/icons/Looping.png"
+                    "metaValue": "../icons/Looping.png"
                 },   
                 {
                     "metaName": "io_nodes",

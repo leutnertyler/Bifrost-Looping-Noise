@@ -16,12 +16,12 @@
                 {
                     "metaName": "documentation",
                     "metaType": "string",
-                    "metaValue": "../Looping Noise/docs/looping_fcurve.md"
+                    "metaValue": "../docs/looping_fcurve.md"
                 },
                 {
                     "metaName": "icon",
                     "metaType": "string",
-                    "metaValue": "../Looping Noise/icons/Looping.png"
+                    "metaValue": "../icons/Looping.png"
                 },   
                 {
                     "metaName": "io_nodes",

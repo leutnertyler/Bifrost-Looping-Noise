@@ -2,7 +2,7 @@
 A library of looping noise nodes for Bifrost.
 
 Install: 
--Place the contents of the "docs" folder inside your Bifrost docs location (C:\Users(username)\Autodesk\Bifrost\Compounds\docs)<\br>
+-Place the contents of the "docs" folder inside your Bifrost docs location (C:\Users(username)\Autodesk\Bifrost\Compounds\docs)
 -Place the contents of the "icons" folder inside your Bifrost icons location (C:\Users(username)\Autodesk\Bifrost\Compounds\icons)
 -Place the contents of the "compounds" folder inside your Bifrost compounds location (C:\Users(username)\Autodesk\Bifrost\Compounds\compounds)
 

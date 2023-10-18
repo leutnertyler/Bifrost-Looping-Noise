@@ -17,12 +17,12 @@
                 {
                     "metaName": "documentation",
                     "metaType": "string",
-                    "metaValue": "../Looping Noise/docs/looping_fractal_noise.md"
+                    "metaValue": "../docs/looping_fractal_noise.md"
                 },
                 {
                     "metaName": "icon",
                     "metaType": "string",
-                    "metaValue": "../Looping Noise/icons/Looping.png"
+                    "metaValue": "../icons/Looping.png"
                 },   
                 {
                     "metaName": "io_nodes",

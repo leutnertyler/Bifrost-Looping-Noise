@@ -23,7 +23,7 @@
                     "metaName": "icon",
                     "metaType": "string",
                     "metaValue": "../icons/Looping.png"
-                },   
+                },
                 {
                     "metaName": "io_nodes",
                     "metadata": [
@@ -147,14 +147,14 @@
                                             "metaValue": "2"
                                         },
                                         {
-                                            "metaName": "zValue",
-                                            "metaType": "string",
-                                            "metaValue": "58.000000"
-                                        },
-                                        {
                                             "metaName": "LayoutPos",
                                             "metaType": "string",
                                             "metaValue": "791.171 2364.95"
+                                        },
+                                        {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "57.000000"
                                         },
                                         {
                                             "metaName": "io_ports",
@@ -180,14 +180,14 @@
                                             "metaValue": "2"
                                         },
                                         {
-                                            "metaName": "LayoutPos",
-                                            "metaType": "string",
-                                            "metaValue": "2896 619"
-                                        },
-                                        {
                                             "metaName": "zValue",
                                             "metaType": "string",
-                                            "metaValue": "54.000000"
+                                            "metaValue": "67.000000"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "3243.54 883.278"
                                         },
                                         {
                                             "metaName": "io_ports",
@@ -229,11 +229,6 @@
                     "metaValue": "BifrostGraph,Core::Fields,scalar_field"
                 },
                 {
-                    "metaName": "ViewportRect",
-                    "metaType": "string",
-                    "metaValue": "-1448.44 484.387 3607.87 2273.1"
-                },
-                {
                     "metaName": "PortExpandedState",
                     "metadata": [
                         {
@@ -259,9 +254,9 @@
                     "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"expanded\": false,\n                \"group\": \"Loop Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"loop_frames\"\n                    },\n                    {\n                        \"port\": \"time_scale\"\n                    },\n                    {\n                        \"port\": \"smooth_loop\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Fractal Turbulence Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"magnitude\"\n                    },\n                    {\n                        \"port\": \"num_frequencies\"\n                    },\n                    {\n                        \"port\": \"frequency\"\n                    },\n                    {\n                        \"port\": \"ratio\"\n                    },\n                    {\n                        \"port\": \"frequency_ratio\"\n                    },\n                    {\n                        \"port\": \"time_ratio\"\n                    },\n                    {\n                        \"port\": \"seed\"\n                    },\n                    {\n                        \"expanded\": false,\n                        \"group\": \"Noise Transform\",\n                        \"items\": [\n                            {\n                                \"port\": \"translation\"\n                            },\n                            {\n                                \"port\": \"rotation\"\n                            },\n                            {\n                                \"port\": \"scale\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
                 },
                 {
-                    "metaName": "LayoutPos",
+                    "metaName": "ViewportRect",
                     "metaType": "string",
-                    "metaValue": "-13.4681 213.557"
+                    "metaValue": "499.777 572.962 3592.54 2263.44"
                 },
                 {
                     "metaName": "DisplayMode",
@@ -271,7 +266,12 @@
                 {
                     "metaName": "zValue",
                     "metaType": "string",
-                    "metaValue": "96.000000"
+                    "metaValue": "63.000000"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-433.107 714.417"
                 }
             ],
             "terminalStates": [
@@ -371,7 +371,7 @@
                     "portName": "smooth_loop",
                     "portDirection": "input",
                     "portType": "bool",
-                    "portDefault": "true"
+                    "portDefault": "false"
                 }
             ],
             "compoundNodes": [
@@ -889,7 +889,7 @@
                         {
                             "metaName": "zValue",
                             "metaType": "string",
-                            "metaValue": "56.000000"
+                            "metaValue": "55.000000"
                         }
                     ]
                 },
@@ -910,7 +910,74 @@
                         {
                             "metaName": "zValue",
                             "metaType": "string",
-                            "metaValue": "57.000000"
+                            "metaValue": "56.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply6",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "transformed_field",
+                        "scalar_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2847.59 922.499"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "64.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "scalar_field5",
+                    "nodeType": "Core::Fields::scalar_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2611.41 1332.19"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "65.000000"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "evaluate_fcurve1",
+                    "nodeType": "Core::FCurve::evaluate_fcurve",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2093.84 1611.74"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "66.000000"
                         }
                     ]
                 }
@@ -1093,10 +1160,6 @@
                     "target": "scalar_field2.value"
                 },
                 {
-                    "source": "transform_field.transformed_field",
-                    "target": ".noise_field"
-                },
-                {
                     "source": ".loop_frames",
                     "target": "divide.first.loop_frames"
                 },
@@ -1107,6 +1170,26 @@
                 {
                     "source": ".time_scale",
                     "target": "multiply.first.time_scale"
+                },
+                {
+                    "source": "scalar_field5.scalar_field",
+                    "target": "multiply6.first.scalar_field"
+                },
+                {
+                    "source": "evaluate_fcurve1.y",
+                    "target": "scalar_field5.value"
+                },
+                {
+                    "source": "transform_field.transformed_field",
+                    "target": "multiply6.first.transformed_field"
+                },
+                {
+                    "source": "multiply6.output",
+                    "target": ".noise_field"
+                },
+                {
+                    "source": "if.output",
+                    "target": "evaluate_fcurve1.x"
                 }
             ],
             "values": [
@@ -1236,6 +1319,64 @@
                                         "y": "1",
                                         "xn": "1.526667",
                                         "yn": "1.003125"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "valueName": "scalar_field5.value",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "evaluate_fcurve1.fcurve",
+                    "valueType": "Math::FCurve",
+                    "value": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "-0.13400000000000001",
+                                        "yp": "0.99843800000000005",
+                                        "x": "0",
+                                        "y": "1",
+                                        "xn": "0.13400000000000001",
+                                        "yn": "1.0015620000000001"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.19400000000000001",
+                                        "yp": "2.0000070000000001",
+                                        "x": "0.5",
+                                        "y": "2",
+                                        "xn": "0.80600000000000005",
+                                        "yn": "2"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.878",
+                                        "yp": "1.001563",
+                                        "x": "1",
+                                        "y": "1",
+                                        "xn": "1.1220000000000001",
+                                        "yn": "0.99843999999999999"
                                     }
                                 }
                             }

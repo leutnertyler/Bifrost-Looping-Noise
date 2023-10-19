@@ -12,7 +12,7 @@
     "compounds": [
         {
             "name": "Looping::Noise::looping_fractal_noise",
-            "uriImported": "file:///looping_fractal_noise.json",
+            "uriImported": "file:///NEW_looping_fractal_noise.json",
             "metadata": [
                 {
                     "metaName": "documentation",
@@ -23,7 +23,7 @@
                     "metaName": "icon",
                     "metaType": "string",
                     "metaValue": "../icons/Looping.png"
-                },   
+                },
                 {
                     "metaName": "io_nodes",
                     "metadata": [
@@ -93,6 +93,11 @@
                                             "metaValue": "894.353 2537.82"
                                         },
                                         {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "43.000000"
+                                        },
+                                        {
                                             "metaName": "io_ports",
                                             "metadata": [
                                                 {
@@ -102,11 +107,6 @@
                                                     "metaName": "loop_frames"
                                                 }
                                             ]
-                                        },
-                                        {
-                                            "metaName": "zValue",
-                                            "metaType": "string",
-                                            "metaValue": "43.000000"
                                         }
                                     ]
                                 },
@@ -124,17 +124,17 @@
                                             "metaValue": "2423.2 2800.36"
                                         },
                                         {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "44.000000"
+                                        },
+                                        {
                                             "metaName": "io_ports",
                                             "metadata": [
                                                 {
                                                     "metaName": "smooth_loop"
                                                 }
                                             ]
-                                        },
-                                        {
-                                            "metaName": "zValue",
-                                            "metaType": "string",
-                                            "metaValue": "44.000000"
                                         }
                                     ]
                                 }
@@ -157,17 +157,17 @@
                                             "metaValue": "3711.31 2196.8"
                                         },
                                         {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "45.000000"
+                                        },
+                                        {
                                             "metaName": "io_ports",
                                             "metadata": [
                                                 {
                                                     "metaName": "noise"
                                                 }
                                             ]
-                                        },
-                                        {
-                                            "metaName": "zValue",
-                                            "metaType": "string",
-                                            "metaValue": "45.000000"
                                         }
                                     ]
                                 }
@@ -206,21 +206,6 @@
                     "metaValue": "1278.27 1604.15 2488.01 1491.03"
                 },
                 {
-                    "metaName": "DisplayMode",
-                    "metaType": "string",
-                    "metaValue": "2"
-                },
-                {
-                    "metaName": "LayoutPos",
-                    "metaType": "string",
-                    "metaValue": "-324.094 -95.9426"
-                },
-                {
-                    "metaName": "zValue",
-                    "metaType": "string",
-                    "metaValue": "89.000000"
-                },
-                {
                     "metaName": "UILayout",
                     "metaType": "string",
                     "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"position\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Loop Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"loop_frames\"\n                    },\n                    {\n                        \"port\": \"time_scale\"\n                    },\n                    {\n                        \"port\": \"smooth_loop\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Fractal Noise Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"magnitude\"\n                    },\n                    {\n                        \"port\": \"num_frequencies\"\n                    },\n                    {\n                        \"port\": \"frequency\"\n                    },\n                    {\n                        \"port\": \"ratio\"\n                    },\n                    {\n                        \"port\": \"frequency_ratio\"\n                    },\n                    {\n                        \"port\": \"time_ratio\"\n                    },\n                    {\n                        \"port\": \"seed\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
@@ -234,6 +219,21 @@
                             "metaValue": "0"
                         }
                     ]
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-1571.31 398.856"
+                },
+                {
+                    "metaName": "zValue",
+                    "metaType": "string",
+                    "metaValue": "88.000000"
                 }
             ],
             "ports": [
@@ -298,13 +298,13 @@
                 {
                     "portName": "noise",
                     "portDirection": "output",
-                    "portType": "Math::float3"
+                    "portType": "float"
                 },
                 {
                     "portName": "smooth_loop",
                     "portDirection": "input",
                     "portType": "bool",
-                    "portDefault": "true"
+                    "portDefault": "false"
                 }
             ],
             "compoundNodes": [
@@ -619,10 +619,6 @@
                     "target": "if.condition"
                 },
                 {
-                    "source": "lerp.interpolated",
-                    "target": ".noise"
-                },
-                {
                     "source": ".position",
                     "target": "fractal_noise.position"
                 },
@@ -701,6 +697,10 @@
                 {
                     "source": "fractal_noise1.noise",
                     "target": "lerp.second"
+                },
+                {
+                    "source": "lerp.interpolated",
+                    "target": ".noise"
                 }
             ],
             "values": [

@@ -12,6 +12,7 @@
     "compounds": [
         {
             "name": "Looping::Noise::looping_curl_noise",
+            "uriImported": "file:///looping_curl_noise.json",
             "metadata": [
                 {
                     "metaName": "documentation",
@@ -22,7 +23,7 @@
                     "metaName": "icon",
                     "metaType": "string",
                     "metaValue": "../icons/Looping.png"
-                },   
+                },
                 {
                     "metaName": "io_nodes",
                     "metadata": [
@@ -114,22 +115,22 @@
                                             "metaValue": "2"
                                         },
                                         {
-                                            "metaName": "LayoutPos",
-                                            "metaType": "string",
-                                            "metaValue": "2355.6 681.994"
-                                        },
-                                        {
-                                            "metaName": "zValue",
-                                            "metaType": "string",
-                                            "metaValue": "54.000000"
-                                        },
-                                        {
                                             "metaName": "io_ports",
                                             "metadata": [
                                                 {
                                                     "metaName": "noise"
                                                 }
                                             ]
+                                        },
+                                        {
+                                            "metaName": "zValue",
+                                            "metaType": "string",
+                                            "metaValue": "63.000000"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "2739.52 653.473"
                                         }
                                     ]
                                 }
@@ -163,11 +164,6 @@
                     "metaValue": "BifrostGraph,Core::Math,SRT_to_matrix"
                 },
                 {
-                    "metaName": "ViewportRect",
-                    "metaType": "string",
-                    "metaValue": "353.078 -432.824 3226.58 1933.65"
-                },
-                {
                     "metaName": "UILayout",
                     "metaType": "string",
                     "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"position\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Loop Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"loop_frames\"\n                    },\n                    {\n                        \"port\": \"time_scale\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Curl Noise Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"magnitude\"\n                    },\n                    {\n                        \"port\": \"seed\"\n                    },\n                    {\n                        \"expanded\": false,\n                        \"group\": \"Transform Noise\",\n                        \"items\": [\n                            {\n                                \"port\": \"noise_scale\"\n                            },\n                            {\n                                \"port\": \"noise_translate\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
@@ -193,9 +189,9 @@
                     ]
                 },
                 {
-                    "metaName": "LayoutPos",
+                    "metaName": "ViewportRect",
                     "metaType": "string",
-                    "metaValue": "-319.834 -358.667"
+                    "metaValue": "-250.593 -330.091 3546.56 2234.47"
                 },
                 {
                     "metaName": "DisplayMode",
@@ -203,9 +199,14 @@
                     "metaValue": "2"
                 },
                 {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-82.6867 13.1871"
+                },
+                {
                     "metaName": "zValue",
                     "metaType": "string",
-                    "metaValue": "93.000000"
+                    "metaValue": "45.000000"
                 }
             ],
             "terminalStates": [
@@ -790,6 +791,52 @@
                             "metaValue": "52.000000"
                         }
                     ]
+                },
+                {
+                    "nodeName": "evaluate_fcurve1",
+                    "nodeType": "Core::FCurve::evaluate_fcurve",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "58.000000"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1875.56 1455.74"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply9",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "interpolated",
+                        "y"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "zValue",
+                            "metaType": "string",
+                            "metaValue": "62.000000"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2429.09 662.848"
+                        }
+                    ]
                 }
             ],
             "connections": [
@@ -966,8 +1013,20 @@
                     "target": "multiply.first.loop_frames"
                 },
                 {
+                    "source": "evaluate_fcurve1.y",
+                    "target": "multiply9.first.y"
+                },
+                {
                     "source": "multiply5.output",
+                    "target": "multiply9.first.interpolated"
+                },
+                {
+                    "source": "multiply9.output",
                     "target": ".noise"
+                },
+                {
+                    "source": "modulo1.remainder",
+                    "target": "evaluate_fcurve1.x"
                 }
             ],
             "values": [
@@ -975,6 +1034,59 @@
                     "valueName": "modulo1.divisor",
                     "valueType": "float",
                     "value": "1f"
+                },
+                {
+                    "valueName": "evaluate_fcurve1.fcurve",
+                    "valueType": "Math::FCurve",
+                    "value": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "-0.13400000000000001",
+                                        "yp": "0.99843800000000005",
+                                        "x": "0",
+                                        "y": "1",
+                                        "xn": "0.13400000000000001",
+                                        "yn": "1.0015620000000001"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.19400000000000001",
+                                        "yp": "2.0000070000000001",
+                                        "x": "0.5",
+                                        "y": "2",
+                                        "xn": "0.80600000000000005",
+                                        "yn": "2"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.878",
+                                        "yp": "1.001563",
+                                        "x": "1",
+                                        "y": "1",
+                                        "xn": "1.1220000000000001",
+                                        "yn": "0.99843999999999999"
+                                    }
+                                }
+                            }
+                        ]
+                    }
                 }
             ],
             "reservedNodeNames": [
